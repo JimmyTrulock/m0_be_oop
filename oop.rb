@@ -17,8 +17,7 @@ end
 
 char1 = UnicornClass.new("Buttercup")
 puts char1
-char1.say("Hello there!")
-puts char1
+puts char1.say("Hello there!")
 
 
 
@@ -40,10 +39,14 @@ class VampireClass
         @pet = new_pet
     end
 
-    def drink(drink)
+    def drink
         @thirsty = false
     end
 end
+
+puts VampireClass.drink
+
+
 
 #  Write a Dragon class
 #  it should have a dynamic name attribute (string)
@@ -93,7 +96,7 @@ class HobbitClass
         else
             @is_old = false
         end
-        if name = "Frodo"
+        if name == "Frodo"
             @has_ring = true
         else
             @has_ring = false
