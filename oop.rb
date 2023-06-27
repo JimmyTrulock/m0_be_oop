@@ -44,7 +44,12 @@ class VampireClass
     end
 end
 
-puts VampireClass.drink
+vamp1 = VampireClass.new("Joe")
+p vamp1
+
+vamp1.drink
+
+p vamp1
 
 
 
@@ -62,12 +67,25 @@ class DragonClass
         @rider = rider
         @color = color
         @is_hungry = true
+        @counter = 0
     end
 
-    def eat(eat)
-        @is_hungry = false
+    def eat
+        @counter += 1
+        @is_hungry = false if @counter >= 4
     end
 end
+
+
+drag1 = DragonClass.new("Balrog", "Jax", "Blue")
+p drag1
+
+drag1.eat
+drag1.eat
+drag1.eat
+drag1.eat
+
+p drag1
 
 
 
