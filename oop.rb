@@ -103,7 +103,7 @@ class HobbitClass
     def initialize(name, dispo)
         @name = name
         @dispo = dispo
-        @age = 32
+        @age = 100
         @is_adult = false 
         @is_old = false
         @has_ring = false
@@ -111,21 +111,38 @@ class HobbitClass
         def celebrate_birthday
             @age = @age + 1
         end
+    end
 
-        def is_adult
-            @age >= 33
+
+    def is_adult
+        if @age >= 33
+            @is_adult = true
         end
+    end
 
+    def is_old
+        if @age >= 101
+            @is_old = true
+        end
+    end
+    
+    def has_ring
+        if @name == "Frodo"
+            @has_ring = true
+        end    
+        
     end
 end
 
 
 
-hobb1 = HobbitClass.new("Steve", "Happy")
+hobb1 = HobbitClass.new("Frodo", "Happy")
 p hobb1
 
 hobb1.celebrate_birthday
 hobb1.is_adult
+hobb1.is_old
+hobb1.has_ring
 
 p hobb1
  
